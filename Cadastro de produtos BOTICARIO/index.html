@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Boticário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Produtos - Boticário</h1>
+  
+        <form id="formulario-produto">
+            <label for="nome-produto">Nome do Produto:</label>
+            <input type="text" id="nome-produto" required>
+
+            <label for="descricao-produto">Descrição do Produto:</label>
+            <textarea id="descricao-produto" required></textarea>
+
+            <label for="preco-produto">Preço:</label>
+            <input type="number" id="preco-produto" required>
+
+            <label for="quantidade-produto">Quantidade em Estoque:</label>
+            <input type="number" id="quantidade-produto" required>
+
+            <label for="categoria-produto">Categoria:</label>
+            <select id="categoria-produto" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="infantil">Infantil</option>
+                <option value="cabelos">Cuidados para os Cabelos</option>
+                <option value="corpo">Cuidados Corporais</option>
+            </select>
+
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+
+        <div id="produto-opcoes">
+            <h2>Opções de Produto</h2>
+            <div>
+                <label for="buscar-produto">Buscar Produto:</label>
+                <input type="text" id="buscar-produto" placeholder="Digite o nome ou palavra-chave">
+                <button id="buscar-produto-btn">Buscar</button>
+            </div>
+
+            <div>
+                <label for="produto-id">ID do Produto:</label>
+                <input type="number" id="produto-id" placeholder="Digite o ID para excluir ou atualizar">
+                <button id="excluir-produto-btn">Excluir Produto</button>
+            </div>
+
+            <div>
+                <label for="novo-nome-produto">Novo Nome:</label>
+                <input type="text" id="novo-nome-produto" placeholder="Digite o novo nome">
+                <label for="novo-preco-produto">Novo Preço:</label>
+                <input type="number" id="novo-preco-produto" placeholder="Digite o novo preço">
+                <button id="atualizar-produto-btn">Atualizar Produto</button>
+            </div>
+        </div>
+
+        <div id="botoes-categorias">
+            <button data-categoria="masculino">Masculino</button>
+            <button data-categoria="feminino">Feminino</button>
+            <button data-categoria="infantil">Infantil</button>
+            <button data-categoria="cabelos">Cuidados para os Cabelos</button>
+            <button data-categoria="corpo">Cuidados Corporais</button>
+        </div>
+
+        <div id="lista-produtos">
+            <h2>Lista de Produtos</h2>
+
+            <div class="categoria" id="masculino-categoria">
+                <h3>Masculino</h3>
+                <ul id="masculino-produtos"></ul>
+            </div>
+
+            <div class="categoria" id="feminino-categoria">
+                <h3>Feminino</h3>
+                <ul id="feminino-produtos"></ul>
+            </div>
+
+            <div class="categoria" id="infantil-categoria">
+                <h3>Infantil</h3>
+                <ul id="infantil-produtos"></ul>
+            </div>
+
+            <div class="categoria" id="cabelos-categoria">
+                <h3>Cuidados para os Cabelos</h3>
+                <ul id="cabelos-produtos"></ul>
+            </div>
+
+            <div class="categoria" id="corpo-categoria">
+                <h3>Cuidados Corporais</h3>
+                <ul id="corpo-produtos"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
